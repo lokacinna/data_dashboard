@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Data Dashboard</title>
+  <!-- my typography -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Open+Sans|Playfair+Display:700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS file -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- c3 css-->
+  <link rel="stylesheet" href="c3/c3.min.css">
+  <!--datatables.net-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+  <!-- my css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark" style="background-color: #000000;">
+    <a class="navbar-brand" href="#">
+      <img src="media/wplogo.png" height="50px" width="auto" alt="Washington Post Logo">
+    </a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+
+  <!-- img srced from https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjwpNP7k67lAhXqm-AKHVvLBqQQjhx6BAgBEAI&url=https%3A%2F%2Fwww.inverse.com%2Farticle%2F35514-donald-trump-reelection-ad-campaign-2020&psig=AOvVaw2g9Grz4osJm-bXnhZOfNJ1&ust=1571774893440265 -->
+
+<div class="row">
+    <div class="col-2"></div>
+  <div class="col-8">
+<h1>Why Trump's Online Advertising Strategy is Hard to Beat</h1>
+  </div>
+    <div class="col-2"></div>
+</div>
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <img src="media/campaign.jpg" alt="a picture of Trump and his logo" height="400px" width="auto">
+  </div>
+  <div class="col-2"></div>
+</div>
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <hr>
+  </div>
+  <div class="col-2"></div>
+</div>
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <p>The day after inauguration, President Trump relaunched his campaign freshly outfitted for 2020. While Democrats tend to focus on <a href= "https://technologyreview.us11.list-manage.com/track/click?u=47c1a9cec9749a8f8cbc83e78&id=d229cc96c4&e=28006499c0">television ads</a> and more traditional platforms for political advertising, the Trump campaign has created a tech-saavy style of bombardment ads to target the public's attention span for exactly as long as they're listening.</p>
+  </br>
+    <p><a href="https://transparencyreport.google.com/political-ads/region/US">Google's Transparency Report</a> offers a dashboard overview of the highest-paying advertisors, what states they spend the most money in, and how many ads they've paid for. We used this information to track President Trump's two current committees: the Make America Great Again Committee and Donald J Trump For President, Inc. Respectively, these are ranked as the first and sixth largest spenders in terms of political advertising on Google in the United States.</p>
+  </div>
+  <div class="col-2"></div>
+</div>
+
+<div class="row">
+  <div id="chart" class="col-12">
+    here
+  </div>
+</div>
+
+
+<!-- Bootstrap JS just in case -->
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- c3 JS here -->
+<script src="c3/c3.min.js"></script>
+<!-- datatables.net -->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<!-- my jquery goes here -->
+<script src="scripts.js"></script>
+</body>
+</html>
