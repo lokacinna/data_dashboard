@@ -17,3 +17,8 @@ p {
  .caption {
    font-family: 'Open Sans', sans-serif;
  }
+
+ .fit-image {
+   object-fit: cover;
+   width: 100%;
+ }

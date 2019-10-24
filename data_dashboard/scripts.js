@@ -9,21 +9,27 @@ $(document).ready(function(){
   // loadData("data/bicycle-crash-data-chapel-hill-region.csv");
   // loadData("data/chart.json");
   loadData();
-})
+});
 
-function loadData(){
-  //ajax request
-  // onSuccess parseData(data);
-  // var chart = c3.generate({
-  //     data: {
-  //         url: '/googledata/google-political-ads-top-keywords-history.csv',
-  //         type: 'line'
-  //     }
 
-var chart = c3.generate({
+function loadData() {
+  $.ajax({
+    type:"GET",
+    url:"data.json",
+    dataType:"json",
+    success: parseData
+  });
+}
+
+// function parseData() {
+//
+// }
+
+function loadData() {
+var chart1 = c3.generate({
+  bindto: "#chart1",
     data: {
         // iris data from R
-        bindto: "#chart",
         columns: [
             ['Donald J Trump For President, Inc', 3338400],
             ['Make America Great Again Committee', 7461800],
@@ -51,6 +57,31 @@ var chart = c3.generate({
           ],
           type: 'scatter'
       },
-});
-  // });
-};
+    });
+
+    // var chart3 = c3.generate({
+    //   bindto: "#chart3",
+    //     data: {
+    //         url: 'googledata/google-political-ads-advertiser-weekly-spend.csv',
+    //         type: 'bar'
+    //     }
+    // });
+
+    var chart = c3.generate({
+      bindto: "#chart3",
+        data: {
+            json: {
+                data1: [0, 0, 0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 5600, 600, 5800, 4900, 2700, 269100, 70400, 1900, 700, 700, 500, 700, 2100, 2900, 3800, 527800, 10700, 5500, 3800, 13100, 16000, 11400, 11800, 25400, 15200, 7000, 15300, 10500, 7600, 18700, 18000, 34800, 11700, 16200, 12800, 13000, 5600, 9400, 115200, 469200, 50600, 50000, 53000, 41400, 92000, 73900, 82200, 39700, 43000, 29200, 36800, 37500, 256500, 652900]
+            }
+        },
+        axis: {
+       x: {
+           label: 'Weeks from May 2018 to October 2019'
+       },
+       y: {
+           label: 'Money Spent in USD'
+       }
+   }
+    });
+
+}
